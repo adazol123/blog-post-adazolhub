@@ -1,4 +1,5 @@
 # Adazolhub | Next JS Boilerplate
+![Image of app](/public/nextjs-boilerplate.png)
 
 ### Getting Started
 
