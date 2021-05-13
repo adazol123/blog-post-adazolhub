@@ -1,6 +1,6 @@
 # Adazolhub | Blog Post
 
-![Image of app](/public/blog-post-adazolhub.png)
+![Image of app](/public/blog-post-adazolhub-update.png)
 
 ### Getting Started
 
