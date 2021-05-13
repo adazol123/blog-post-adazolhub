@@ -1,17 +1,27 @@
+:root {
+  --primary: #16C995;
+  --dark-primary: #454A4E;
+  --light-primary: #F3F3F6;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: #333;
-  background-color: rgb(249, 249, 250);
+  color: var(--light-primary);
+  /* background-color: rgb(249, 249, 250); */
+  background: var(--dark-primary);
 
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+a:hover {
+  
 }
 
 * {

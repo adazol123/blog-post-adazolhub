@@ -3,6 +3,8 @@ import styles from '../../styles/Home.module.css'
 
 const Footer = () => {
     return ( 
+        <div className="content">
+
         <footer className={styles.footer}>
             <a
             href="https://adazolhub.online"
@@ -15,6 +17,7 @@ const Footer = () => {
             </span>
             </a>
         </footer>
+        </div>
      );
 }
  
