@@ -3,18 +3,35 @@
 
 ### Getting Started
 
-First, clone this repository using git command terminal
+First, Open Command console then, navigate to any directory where you want to start you development enviroment
+
+Then , clone this repository using git command on your command console
+
 ```bash
-# navigate any directory where you want to make your development environment
 git clone https://github.com/adazol123/nextjs-boilerplate-adazolhub.git
-# then navigate to your this directory folder
-cd nextjs-boilerplate-adazolhub
-# install the node_module package yung npm or yarn
-yarn install
-# then open this folder to your coding enviroment (VS Code, etc)
 ```
 
-First, run the development server:
+Navigate to this directory
+
+```bash
+cd nextjs-boilerplate-adazolhub
+```
+
+Install the node_module folder using npm or yarn command
+
+```bash
+yarn install
+# or
+npm install
+```
+Open any coding editor (VS Code, etc)
+
+```bash
+code .
+
+```
+
+run the development server:
 
 ```bash
 npm run dev
