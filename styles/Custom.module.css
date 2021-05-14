@@ -1,5 +1,10 @@
 /* This is a customize css module */
-
+.navigation_full_width {
+    display: grid;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 .navigation_bar {
     max-width: 100vw;
     width: 100%;
@@ -9,7 +14,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: rgba(69, 74, 78, 0.6);
+    background: rgba(69, 74, 78, 0.815);
     color: var(--light-primary, darken white);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 }
@@ -52,4 +57,32 @@
 
 }
 
+.background_wrap {
+    position: absolute ;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* top: -100px; */
+}
+
+.background_text {
+    position: absolute;
+    /* left: auto; */
+    bottom: 0;
+    right: auto;
+    margin: 0;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    padding-top: 0;
+    text-shadow: 1px 1px 1px #3C5C5E;
+    z-index: 2;
+}
+
+.wrapper {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
 /* Insert your design here */
