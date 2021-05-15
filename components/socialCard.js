@@ -10,6 +10,7 @@ import {
     Badge,
     useColorModeValue,
   } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 const Social = () => {
     return ( 
@@ -84,16 +85,20 @@ const Social = () => {
         </Stack>
 
         <Stack mt={8} direction={'row'} spacing={4}>
+          <NextLink href='https://chat-box-adazolhub.web.app'>
+            <Button
+                flex={1}
+                fontSize={'sm'}
+                rounded={'full'}
+                _focus={{
+                bg: 'gray.200',
+                }}>
+                Message
+            </Button>
+          </NextLink>
+
           <Button
-            flex={1}
-            fontSize={'sm'}
-            rounded={'full'}
-            _focus={{
-              bg: 'gray.200',
-            }}>
-            Message
-          </Button>
-          <Button
+            isDisabled
             flex={1}
             fontSize={'sm'}
             rounded={'full'}
