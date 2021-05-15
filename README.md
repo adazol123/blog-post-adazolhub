@@ -11,6 +11,10 @@ Currently building this website to explore more on next JS framework
 ```bash
 # Date: 05/13/2021
 Designing Navigation bar
+
+# Date: 05/14/2021
+Implementing Chakra UI
+
 ```
 
 ### Planning to Deploy Page on Vercel
