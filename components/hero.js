@@ -37,7 +37,16 @@ const Herom = () => {
             fontWeight={400}
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: '1xl', md: '4xl' })}>
-            Welcome to my personal website. Currently on building progress. You send me notificatio to my email for any suggestions or recommendation or even descrimination. I am open for any opinions.
+            Welcome to my personal website. Currently on building progress. You ca send me a message using the Show More button below for any suggestions or recommendations or even discrimination.
+          </Text >
+          <Text
+            pt='-20px'
+            mx='0'
+            color={'white'}
+            fontWeight={100}
+            lineHeight={0.9}
+            fontSize={useBreakpointValue({ base: '1xl', md: '4xl' })}>
+          I am open for any opinions.
           </Text>
           <Stack direction={'row'}>
             <Button
