@@ -12,6 +12,7 @@ import {
     HStack,
     Link,
     Avatar,
+    AvatarBadge,
     MenuList,
     MenuButton,
     MenuItem,
@@ -19,7 +20,10 @@ import {
     Menu,
     IconButton,
     Text,
-    Spacer, 
+    Spacer,
+    Switch,
+    Circle, 
+    
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import NextImage from "next/image";
@@ -42,7 +46,7 @@ const Links = ['Home', 'Blogs', 'Contact' ,' About'];
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-
+    const logoImage = useBreakpointValue({ base: '/logo-main.svg', md: '/logo.svg'})
     return ( 
         <>
         <Box 
@@ -63,8 +67,9 @@ const Navbar = () => {
             />
 
                 <HStack  spacing={8} alignItems={'center'}>
-                    <Box >
-                        <NextImage src='/logo.svg' height='60px'width='144px'/>
+                    <Box>
+                      
+                        <NextImage src={`${logoImage}`} height='50px'width='144px'/>
                     </Box>
                     
                 </HStack>   
@@ -123,25 +128,66 @@ const Navbar = () => {
                         
                         
                     </HStack>
+
               <MenuButton
                 as={Button}
                 rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}>
+                variant={'solid'}
+                cursor={'pointer'}
+                py={7}
+                px={1}
+              >
+              <Flex>
+
                 <Avatar
-                  size='md'
+                  size='0px'
                   src={
                     'https://images.unsplash.com/photo-1561637235-895323c40053?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=50&w=50&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
                   }
-                />
+                >
+                  <AvatarBadge boxSize="1.01em" bg="red.500" borderColor='transparent'/>
+                </Avatar>
+                
+                <Flex
+                  mx={3}
+                  justifyContent='center'
+                  direction='column'
+                  alignItems='flex-start'
+                  display={{ base: 'none', md: 'flex' }}
+                  >
+                <span> Daniel Lozada</span>
+                <Text 
+                fontWeight={100}
+                fontSize='small'
+                mt={1}
+                
+                >System Engineer</Text>
+                </Flex>
+                  </Flex>
               </MenuButton>
               <MenuList>
-                <MenuItem>Profile</MenuItem>
-                <MenuItem>Theme</MenuItem>
-                <MenuItem>Setings</MenuItem>
+                <MenuItem minH="58px">
+                <Image
+                  boxSize="1.8rem"
+                  borderRadius="full"
+                  src="https://images.unsplash.com/photo-1561637235-895323c40053?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=50&w=50&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
+                  alt="Fluffybuns the destroyer"
+                  mr="12px"
+                />
+                Profile</MenuItem>
+
+                <MenuItem>
+                <Circle size="1.8rem" mr="12px" bg="green.400" color="white"> 🙇‍♂️ </Circle>
+                Theme
+                </MenuItem>
+                <MenuItem>
+                <Circle size="1.8rem" fontSize={15} mr="12px" bg="green.400" color="white"> ⚙ </Circle>
+                Settings</MenuItem>
                 <MenuDivider />
                 <NextLink href='/'>
-                  <MenuItem Item>Logout</MenuItem>
+                  <MenuItem Item>
+                  <Circle size="1.8rem" fontSize={13} mr="12px" bg="blue.700" color="white"> 🔚  </Circle>  
+                  Logout</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>
