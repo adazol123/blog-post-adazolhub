@@ -46,7 +46,8 @@ const Links = ['Home', 'Blogs', 'Contact' ,' About'];
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const logoImage = useBreakpointValue({ base: '/logo-main.svg', md: '/logo.svg'})
+    const logoImage = useBreakpointValue({ base: 'logo-main.svg', md: 'logo.svg'})
+    const logoSize = useBreakpointValue({ base: '38px', md: '60px'})
     return ( 
         <>
         <Box 
@@ -69,7 +70,7 @@ const Navbar = () => {
                 <HStack  spacing={8} alignItems={'center'}>
                     <Box>
                       
-                        <NextImage src={`${logoImage}`} height='50px'width='144px'/>
+                        <NextImage src={`/${logoImage}`} height={`${logoSize}`} width='auto'/>
                     </Box>
                     
                 </HStack>   
@@ -132,20 +133,23 @@ const Navbar = () => {
               <MenuButton
                 as={Button}
                 rounded={'full'}
-                variant={'solid'}
+                variant={'outline'}
                 cursor={'pointer'}
-                py={7}
-                px={1}
+                py={6}
+                px={2}
               >
-              <Flex>
+              <Flex
+                justifyContent='center'
+                alignItems='center'
+              >
 
                 <Avatar
-                  size='0px'
+                  size='sm'
                   src={
-                    'https://images.unsplash.com/photo-1561637235-895323c40053?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=50&w=50&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+                    'https://images.unsplash.com/photo-1561637235-895323c40053?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=40&w=40&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
                   }
                 >
-                  <AvatarBadge boxSize="1.01em" bg="red.500" borderColor='transparent'/>
+                  <AvatarBadge boxSize="1.01em" bg="green.500" borderColor='transparent'/>
                 </Avatar>
                 
                 <Flex
@@ -158,7 +162,7 @@ const Navbar = () => {
                 <span> Daniel Lozada</span>
                 <Text 
                 fontWeight={100}
-                fontSize='small'
+                fontSize='0.6em'
                 mt={1}
                 
                 >System Engineer</Text>
@@ -185,7 +189,7 @@ const Navbar = () => {
                 Settings</MenuItem>
                 <MenuDivider />
                 <NextLink href='/'>
-                  <MenuItem Item>
+                  <MenuItem>
                   <Circle size="1.8rem" fontSize={13} mr="12px" bg="blue.700" color="white"> 🔚  </Circle>  
                   Logout</MenuItem>
                 </NextLink>

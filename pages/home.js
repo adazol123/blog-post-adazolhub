@@ -12,10 +12,12 @@ const Home = () => {
     const formBackground = useColorModeValue("gray.200", "gray.700")
 
     return ( 
-        <Box w='100vw'>
-        <Navbar/>
-        <Herom/>
+        <>
+        <Box>
+            <Navbar/>
+            <Herom/>
         </Box>
+        </>
         
      );
 }
