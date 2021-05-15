@@ -33,8 +33,8 @@ const ModalSocial = () => {
             _hover={{ bg: 'green.300' }}
         >Show More</Button>
   
-        <Modal isOpen={isOpen} onClose={onClose}
-           
+        <Modal isOpen={isOpen} onClose={onClose} isCentered
+            motionPreset="scale"
         >
           <ModalOverlay />
           <ModalContent 
