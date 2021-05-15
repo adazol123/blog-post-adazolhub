@@ -33,7 +33,7 @@ import {
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode()
-  const formBackground = useColorModeValue("gray.50", "gray.700")
+  const formBackground = useColorModeValue("gray.200", "gray.700")
 
   const { isOpen, onToggle } = useDisclosure()
   const toast = useToast()
@@ -45,6 +45,7 @@ export default function Home() {
       alignItems="center"
       justifyContent="center"
       direction="column"
+      background={formBackground}
       pb={40}
       pt={40}
     >
@@ -59,7 +60,7 @@ export default function Home() {
         // rounded={10}
       >
         <Flex
-        height='100%'
+        height='100vmin'
         justifySelf='center'
           alignItems='center'
           justifyContent='center'
@@ -72,11 +73,13 @@ export default function Home() {
             variant="ghost"
             onClick={() => 
               toast({
-                title: 'Sucesss toast',
+                title: 'Test sucessfully sent!',
                 status: 'success',
                 isClosable: true,
                 position: 'bottom-right',
                 duration: 9000,
+                variant: 'subtle',
+                width: '20px'
               })
           }>Test</Button>
           <Spacer/>
@@ -94,17 +97,27 @@ export default function Home() {
         </Flex>
           
       </Flex>
+      
       <Img 
         src='/logo-main.svg'
         alt="adazolhub logo"
-        boxSize='20vmin'
+        boxSize='200px'
+        mt={20}
         mb={4}
       />
-      <Text fontSize='2rem' fontWeight='hairline' mb={120}> ADAZOLHUB </Text>
-      <NextLink href="/adazolhub">
-        <Button w='35vmin' h='80px' onClick={onToggle}
+      <Text fontSize={24} fontWeight='hairline' mb={4}> ADAZOLHUB </Text>
+      <Spacer/>
+      <NextLink href="/home">
+        <Button 
+          w='180px' 
+          h='80px' 
+          onClick={onToggle}
+          variant='outline'
+          colorScheme='teal'
             fontSize='0.9rem'
-            px={30}
+            px={20}
+            py={5}
+            mb={10}
             rounded={40}
         >  WELCOME </Button>
       </NextLink>
